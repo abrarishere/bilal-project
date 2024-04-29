@@ -15,18 +15,13 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='assets/css/nav.css') }}"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+<script src="https://kit.fontawesome.com/2473dfbb63.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div>
-      <title>Responsive Navigation bar</title>
 
-      <link rel="stylesheet" href="style.css" />
-      <nav class="top">
+      <nav class="top z-1">
         <label class="logo">Excel AI</label>
         <ul class="topUl">
           <li><a href="/">home</a></li>
@@ -58,7 +53,7 @@
       </div>
       {% endif %} {% endfor %} {% endif %} {% endwith %}
       <div class="container">{% block content %} {% endblock %}</div>
-      <nav class="bottom">
+      <nav class="bottom z-1">
         <ul class="bottomUl">
           <li>
             <a href="/"><i class="fas fa-home"></i></a>
@@ -70,10 +65,10 @@
             <a href="/signup"><i class="fa-solid fa-user-plus"></i></a>
           </li>
           <li>
-            <a href="/projects"><i class="fa-solid fa-diagram-project"></i></a>
+            <a href="/projects" class="d-none"><i class="fa-solid fa-diagram-project"></i></a>
           </li>
           <li>
-            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/logout" class="d-none">><i class="fa-solid fa-right-from-bracket"></i></a>
           </li>
         </ul>
       </nav>
